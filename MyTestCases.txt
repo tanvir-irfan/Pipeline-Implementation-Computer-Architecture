@@ -1,0 +1,46 @@
+typedef enum _InstructionType {NOP=0,   // NOP          : Do nothing
+                               ADD,     // ADD R1 R2 R3 : R1 = R2 + R3
+                               SUB,     // SUB R1 R2 R3 : R1 = R2 - R3
+                               MUL,     // MUL R1 R2 R3 : R1 = R2 * R3
+                               DIV,     // DIV R1 R2 R3 : R1 = R2 / R3
+                               XOR,     // XOR R1 R2 R3 : R1 = R2 ^ R3
+                               AND,     // AND R1 R2 R3 : R1 = R2 & R3
+                               OR,      // OR  R1 R2 R3 : R1 = R2 | R3
+                               ADDI,    // ADDI R1 R2 100: R1 = R2 + 100 
+                               SUBI,    // SUBI R1 R2 100: R1 = R2 - 100 
+                               LD,      // LD  R1 R2 32 : R1 = Mem[R2+32]
+                               ST,      // ST  R1 R2 32 : Mem[R2+32] = R1 
+                               BEQZ,    // BEQZ R1 100  : if R1==0 goto NPC + 4 * 100
+                               BNEQZ,   // BNEQZ R1 100 : if R1!= 0 goto NPC + 4*100
+                               HLT,     // HLT          : Exit program
+                               TOTAL_INSTRUCTION_TYPE} InstructionType;
+							   
+							   
+
+	
+elk01:~/Desktop/machine_problem_5513> ./pipeline_golden 1
+Name: Abdullah Muzahid, ID: kwg956
+Fetched ins 189
+Finished ins 189
+Total cycles 354
+Stall cycles 165
+R1 0
+R2 156
+R3 356
+R4 556
+R5 0
+R6 2
+R7 4
+elk01:~/Desktop/machine_problem_5513> ./pipeline_golden 6
+Name: Abdullah Muzahid, ID: kwg956
+Fetched ins 55
+Finished ins 55
+Total cycles 110
+Stall cycles 55
+R1 55
+R2 89
+R3 89
+R4 0
+R5 0
+R6 0
+R7 0
